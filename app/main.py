@@ -6,7 +6,7 @@ class Distance:
     def __init__(self, km: float) -> None:
         self.km = km
 
-    def __str__(self)-> str:
+    def __str__(self) -> str:
         return f"Distance: {self.km} kilometers."
 
     def __repr__(self) -> str:
@@ -53,7 +53,7 @@ class Distance:
 
     def __le__(self, other: Distance | int | float) -> bool:
         if isinstance(other, (int, float)):
-            return  self.km <= other
+            return self.km <= other
         elif isinstance(other, Distance):
             return self.km <= other.km
 
